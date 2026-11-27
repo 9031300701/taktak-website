@@ -372,3 +372,35 @@ body{position:relative}
 .sv.heart{width:96px;height:96px;margin-bottom:6px}
 @media(min-width:1400px){.sv.rays{width:400px;height:400px}}
 @media(max-width:900px){.sv.rays{width:260px;height:260px}.sv.giftorb{width:44px;height:44px}.sv.heart{width:76px;height:76px}}
+/* coin glow strictly behind the word */
+.earn{isolation:isolate}
+.sv.coin{z-index:-1;width:230px;height:144px}
+.sv.coin.on{opacity:.55}
+/* ===== touch & hover feel ===== */
+:root{--spring:cubic-bezier(.34,1.56,.64,1)}
+.fx-card,.reel figure,.store,.btn{position:relative;overflow:hidden;-webkit-tap-highlight-color:transparent}
+.btn,.store{overflow:hidden}
+.ripple{position:absolute;border-radius:50%;pointer-events:none;background:radial-gradient(circle,rgba(255,255,255,.45) 0%,rgba(255,216,77,.25) 40%,transparent 70%);transform:scale(0);animation:rip .65s ease-out forwards;z-index:4}
+@keyframes rip{to{transform:scale(1);opacity:0}}
+.tapped{animation:tapPop .45s var(--spring)}
+@keyframes tapPop{0%{scale:1}35%{scale:.95}100%{scale:1}}
+/* screens reel: spring lift + glow ring + shine sweep */
+.reel figure{transition:transform .5s var(--spring),box-shadow .4s}
+.reel figure:hover{transform:translateY(-12px) rotate(-1.2deg) scale(1.03);box-shadow:0 30px 60px rgba(10,2,25,.5),0 0 0 2px rgba(255,216,77,.6),0 0 40px rgba(255,92,138,.45)}
+.reel figure:after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 35%,rgba(255,255,255,.35) 50%,transparent 65%);transform:translateX(-120%);transition:transform .8s ease;pointer-events:none;border-radius:inherit}
+.reel figure:hover:after{transform:translateX(120%)}
+.reel figure img{transition:transform .6s var(--spring)}
+.reel figure:hover img{transform:scale(1.04)}
+/* feature cards: icon hop on hover/tap */
+.fx-card{transition:transform .35s var(--spring),box-shadow .3s}
+.fx-card:hover .orb img,.fx-card.tapped .orb img{animation:hop .7s var(--spring)}
+@keyframes hop{0%{transform:translateZ(40px) translateY(0) scale(1)}40%{transform:translateZ(40px) translateY(-16px) scale(1.12) rotate(-6deg)}70%{transform:translateZ(40px) translateY(2px) scale(.98)}100%{transform:translateZ(40px) translateY(-6px) scale(1.06) rotate(-4deg)}}
+.fx-card:hover .orb:before{box-shadow:0 6px 0 color-mix(in srgb,var(--c2) 50%,#14062b),0 0 44px var(--c1)}
+.fx-card:active{transform:scale(.98)!important}
+/* hero phones: smooth spring focus */
+.panel img{transition:transform .55s var(--spring),box-shadow .4s}
+.panel img:hover{box-shadow:0 40px 70px rgba(10,2,25,.55),0 0 0 3px rgba(255,216,77,.7)}
+/* buttons press-in */
+.btn,.store{transition:transform .35s var(--spring),box-shadow .3s}
+.btn:active,.store:active{transform:translateY(1px) scale(.97)}
+@media (hover:none){.reel figure:hover,.panel img:hover{transform:none}}

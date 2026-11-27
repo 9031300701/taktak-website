@@ -102,7 +102,7 @@
 
 <section id="host"><div class="wrap"><div class="host">
  <div>
-  <h2>होस्ट बनिए,<br><em class="earn"><canvas class="sv coin" data-svga="anim/coin.svga"></canvas>कमाई</em> कीजिए <canvas class="sv giftorb" data-svga="anim/votaky_gift_kroom.svga"></canvas></h2>
+  <h2>होस्ट बनिए,<br><em class="earn"><canvas class="sv coin" data-svga="anim/coin.svga"></canvas>कमाई</em> कीजिए</h2>
   <p>बात कीजिए, गिफ्ट पाइए, डायमंड जमा कीजिए और पैसे निकालिए। एजेंसी से जुड़कर और ज़्यादा कमाइए।</p>
   <a class="btn" href="#download">अभी शुरू करें →</a>
  </div>
@@ -145,5 +145,14 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{const el=e.target;
  if(e.isIntersecting){if(!el._p){const d=Math.min(devicePixelRatio||1,2);el.width=el.clientWidth*d;el.height=el.clientHeight*d;el._p=new SVGA.Player(el);el._p.loops=0;el._p.clearsAfterStop=false;parser.load(el.dataset.svga,v=>{el._p.setVideoItem(v);el._p.startAnimation();el.classList.add("on")})}else el._p.startAnimation()}
  else if(el._p)el._p.pauseAnimation()}),{rootMargin:"100px"});
 document.querySelectorAll(".sv[data-svga]").forEach(el=>io.observe(el))});
+</script>
+<script>
+/* tap / click ripple + pop feedback */
+document.querySelectorAll(".fx-card,.reel figure,.btn,.store,.panel img").forEach(el=>{
+ el.addEventListener("pointerdown",e=>{const r=el.getBoundingClientRect(),d=Math.max(r.width,r.height)*1.2;
+  if(el.tagName!=="IMG"){const w=document.createElement("span");w.className="ripple";w.style.cssText="width:"+d+"px;height:"+d+"px;left:"+(e.clientX-r.left-d/2)+"px;top:"+(e.clientY-r.top-d/2)+"px";el.appendChild(w);setTimeout(()=>w.remove(),650)}
+  el.classList.remove("tapped");void el.offsetWidth;el.classList.add("tapped")});
+ el.addEventListener("animationend",ev=>{if(ev.animationName==="tapPop")el.classList.remove("tapped")});
+});
 </script>
 </body></html>
