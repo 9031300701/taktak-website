@@ -52,15 +52,21 @@
  </div>
 </div></section>
 
-<section id="features"><div class="wrap">
+<section id="features" class="fx"><div class="wrap">
  <div class="head"><h2><small>FEATURES</small>Taktak में क्या है?</h2><p>बात करने, सुनने और नए लोगों से जुड़ने के सबसे मज़ेदार तरीके।</p></div>
- <div class="grid">
-  <div class="card"><span class="no">01</span><i>🎙️</i><h3>वॉइस पार्टी रूम</h3><p>अपना रूम बनाइए या किसी के रूम में सीट लेकर बात कीजिए।</p></div>
-  <div class="card soon"><span class="soon-tag">जल्द आ रहा है</span><span class="no">02</span><i>📡</i><h3>वीडियो लाइव</h3><p>वीडियो पर लाइव जाने का फीचर जल्द आ रहा है। अभी वॉइस पार्टी का मज़ा लीजिए।</p></div>
-  <div class="card"><span class="no">03</span><i>🎁</i><h3>शानदार गिफ्ट</h3><p>पसंदीदा होस्ट को एनिमेटेड गिफ्ट भेजिए।</p></div>
-  <div class="card"><span class="no">04</span><i>💬</i><h3>प्राइवेट चैट</h3><p>जिनसे बात अच्छी लगी, उनसे सीधे मैसेज में जुड़िए।</p></div>
-  <div class="card"><span class="no">05</span><i>🎮</i><h3>रूम गेम</h3><p>पार्टी में दोस्तों के साथ मज़ेदार गेम खेलिए।</p></div>
-  <div class="card"><span class="no">06</span><i>📸</i><h3>मोमेंट्स</h3><p>अपनी फ़ोटो और पल शेयर कीजिए, लाइक-कमेंट पाइए।</p></div>
+ <div class="fx-grid">
+  <article class="fx-card" style="--c1:#ffd84d;--c2:#ff9f43"><span class="hud tl"></span><span class="hud br"></span>
+   <div class="orb"><img src="img/ic/mic3d.png" alt=""></div><span class="code">01 · VOICE ROOM</span><h3>वॉइस पार्टी रूम</h3><p>अपना रूम बनाइए या किसी के रूम में सीट लेकर बात कीजिए।</p></article>
+  <article class="fx-card soon" style="--c1:#ff5c8a;--c2:#a855f7"><span class="soon-tag">जल्द आ रहा है</span><span class="hud tl"></span><span class="hud br"></span>
+   <div class="orb"><img src="img/ic/video3d.png" alt=""></div><span class="code">02 · VIDEO LIVE</span><h3>वीडियो लाइव</h3><p>वीडियो पर लाइव जाने का फीचर जल्द आ रहा है। अभी वॉइस पार्टी का मज़ा लीजिए।</p></article>
+  <article class="fx-card" style="--c1:#ff5c8a;--c2:#ffd84d"><span class="hud tl"></span><span class="hud br"></span>
+   <div class="orb"><img src="img/ic/gift3d.png" alt=""></div><span class="code">03 · GIFTS</span><h3>शानदार गिफ्ट</h3><p>पसंदीदा होस्ट को एनिमेटेड गिफ्ट भेजिए।</p></article>
+  <article class="fx-card" style="--c1:#a855f7;--c2:#ff5c8a"><span class="hud tl"></span><span class="hud br"></span>
+   <div class="orb"><img src="img/ic/chat3d.png" alt=""></div><span class="code">04 · PRIVATE CHAT</span><h3>प्राइवेट चैट</h3><p>जिनसे बात अच्छी लगी, उनसे सीधे मैसेज में जुड़िए।</p></article>
+  <article class="fx-card" style="--c1:#38bdf8;--c2:#a855f7"><span class="hud tl"></span><span class="hud br"></span>
+   <div class="orb"><img src="img/ic/game3d.png" alt=""></div><span class="code">05 · ROOM GAMES</span><h3>रूम गेम</h3><p>पार्टी में दोस्तों के साथ मज़ेदार गेम खेलिए।</p></article>
+  <article class="fx-card" style="--c1:#ffd84d;--c2:#ff5c8a"><span class="hud tl"></span><span class="hud br"></span>
+   <div class="orb"><img src="img/ic/camera3d.png" alt=""></div><span class="code">06 · MOMENTS</span><h3>मोमेंट्स</h3><p>अपनी फ़ोटो और पल शेयर कीजिए, लाइक-कमेंट पाइए।</p></article>
  </div>
 </div></section>
 
@@ -107,4 +113,7 @@
  </div>
  <p class="f-copy">© 2026 Taktak. सर्वाधिकार सुरक्षित। • सिर्फ़ 18+ यूज़र्स के लिए • support@taktakchat.com</p>
 </div></footer>
+<script>
+document.querySelectorAll(".fx-card").forEach(c=>{c.addEventListener("pointermove",e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform="perspective(800px) rotateY("+x*10+"deg) rotateX("+(-y*10)+"deg) translateY(-4px)";c.style.setProperty("--mx",(x+.5)*100+"%");c.style.setProperty("--my",(y+.5)*100+"%")});c.addEventListener("pointerleave",()=>{c.style.transform=""})});
+</script>
 </body></html>

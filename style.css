@@ -221,3 +221,29 @@ img.mark{width:36px;height:36px;border-radius:50%;background:radial-gradient(cir
 .side-text{display:none}
 .stripes{background:repeating-linear-gradient(-55deg,transparent 0 160px,rgba(255,255,255,.035) 160px 240px)}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+/* ===== futuristic features ===== */
+.fx-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.fx-card{position:relative;padding:28px 26px 26px;border-radius:22px;background:
+ radial-gradient(400px circle at var(--mx,50%) var(--my,0%),rgba(255,255,255,.10),transparent 45%),
+ linear-gradient(180deg,rgba(30,10,60,.62),rgba(20,6,43,.78));
+ backdrop-filter:blur(12px);color:#fff;overflow:hidden;transition:transform .25s ease,box-shadow .25s;transform-style:preserve-3d;box-shadow:0 20px 50px rgba(20,6,43,.35)}
+/* gradient neon border */
+.fx-card:before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.5px;background:linear-gradient(135deg,var(--c1),transparent 40%,transparent 60%,var(--c2));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:.8;pointer-events:none}
+/* faint tech grid */
+.fx-card:after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:22px 22px;mask-image:linear-gradient(180deg,#000,transparent 70%);pointer-events:none}
+.fx-card:hover{box-shadow:0 30px 70px rgba(20,6,43,.5),0 0 40px color-mix(in srgb,var(--c1) 30%,transparent)}
+.hud{position:absolute;width:16px;height:16px;border:2px solid var(--c1);opacity:.7;z-index:2}
+.hud.tl{left:12px;top:12px;border-right:0;border-bottom:0;border-radius:6px 0 0 0}
+.hud.br{right:12px;bottom:12px;border-left:0;border-top:0;border-radius:0 0 6px 0;border-color:var(--c2)}
+.orb{position:relative;width:96px;height:96px;margin-bottom:14px;display:grid;place-items:center;z-index:1}
+.orb:before{content:"";position:absolute;inset:6px;border-radius:50%;background:radial-gradient(circle at 50% 35%,color-mix(in srgb,var(--c1) 55%,transparent),transparent 70%);filter:blur(6px)}
+.orb:after{content:"";position:absolute;left:10px;right:10px;bottom:2px;height:18px;border-radius:50%;border:2px solid color-mix(in srgb,var(--c2) 70%,transparent);box-shadow:0 0 18px var(--c2);opacity:.6}
+.orb img{position:relative;width:84px;height:84px;filter:drop-shadow(0 10px 14px rgba(0,0,0,.35));transition:transform .35s ease;transform:translateZ(40px)}
+.fx-card:hover .orb img{transform:translateZ(40px) translateY(-6px) scale(1.06) rotate(-4deg)}
+.code{position:relative;z-index:1;font-family:ui-monospace,Consolas,monospace;font-size:11.5px;letter-spacing:2px;color:var(--c1);opacity:.9}
+.fx-card h3{position:relative;z-index:1;font-size:22px;font-weight:800;margin:4px 0 6px}
+.fx-card p{position:relative;z-index:1;color:rgba(255,255,255,.75);font-size:15px}
+.fx-card.soon .orb img{filter:drop-shadow(0 10px 14px rgba(0,0,0,.35)) saturate(.7)}
+.fx-card .soon-tag{z-index:3;top:16px;right:16px}
+@media(max-width:900px){.fx-grid{grid-template-columns:1fr 1fr;gap:14px}.fx-card{padding:22px 16px}.orb{width:76px;height:76px}.orb img{width:66px;height:66px}.fx-card h3{font-size:18px}.fx-card p{font-size:13.5px}}
+@media(max-width:520px){.fx-grid{grid-template-columns:1fr}}
