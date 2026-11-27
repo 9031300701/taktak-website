@@ -155,4 +155,11 @@ document.querySelectorAll(".fx-card,.reel figure,.btn,.store,.panel img").forEac
  el.addEventListener("animationend",ev=>{if(ev.animationName==="tapPop")el.classList.remove("tapped")});
 });
 </script>
+<script>
+/* screens: enter one by one from the right when section comes into view */
+(()=>{const reel=document.querySelector(".reel");if(!reel)return;
+ reel.querySelectorAll("figure").forEach((f,i)=>f.style.setProperty("--i",i));
+ reel.classList.add("pre");
+ new IntersectionObserver((es,o)=>es.forEach(e=>{if(e.isIntersecting){reel.scrollLeft=0;reel.classList.add("in");o.disconnect();const fs=reel.querySelectorAll("figure");fs[fs.length-1].addEventListener("animationend",()=>{reel.classList.add("done");reel.scrollLeft=0},{once:true})}}),{threshold:.25}).observe(reel);})();
+</script>
 </body></html>

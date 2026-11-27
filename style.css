@@ -404,3 +404,11 @@ body{position:relative}
 .btn,.store{transition:transform .35s var(--spring),box-shadow .3s}
 .btn:active,.store:active{transform:translateY(1px) scale(.97)}
 @media (hover:none){.reel figure:hover,.panel img:hover{transform:none}}
+/* ===== reel entrance: right → left, one by one ===== */
+.reel.pre figure{opacity:0;translate:110vw 0}
+.reel.in figure{animation:slideIn .9s cubic-bezier(.22,1.2,.36,1) both;animation-delay:calc(var(--i) * .16s)}
+@keyframes slideIn{0%{opacity:0;translate:110vw 0;rotate:6deg}60%{opacity:1}100%{opacity:1;translate:0 0;rotate:0deg}}
+.reel{overflow-y:visible}
+@media (prefers-reduced-motion:reduce){.reel.pre figure{opacity:1;translate:none}}
+.reel.pre:not(.done){overflow-x:hidden;scroll-snap-type:none}
+.reel.in figure{animation-duration:1s;animation-delay:calc(var(--i) * .24s)}
