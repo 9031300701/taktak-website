@@ -70,7 +70,7 @@ const T={
  "fo.del":{en:"Delete Account",hi:"अकाउंट डिलीट",ja:"アカウント削除"},
  "fo.about":{en:"About Taktak",hi:"Taktak के बारे में",ja:"Taktakについて"},
  "fo.contact":{en:"Contact Us",hi:"संपर्क करें",ja:"お問い合わせ"},
- "fo.copy":{en:'© 2026 Taktak. All rights reserved. • 18+ users only • support@taktakchat.com',hi:'© 2026 Taktak. सर्वाधिकार सुरक्षित। • सिर्फ़ 18+ यूज़र्स के लिए • support@taktakchat.com',ja:"© 2026 Taktak. 全著作権所有 • 18歳以上限定 • support@taktakchat.com"}
+ "fo.copy":{en:'© 2026 Taktak. All rights reserved. <span class="ja">全著作権所有</span> • 18+ users only • support@taktakchat.com',hi:'© 2026 Taktak. सर्वाधिकार सुरक्षित। <span class="ja">全著作権所有</span> • सिर्फ़ 18+ यूज़र्स के लिए • support@taktakchat.com',ja:"© 2026 Taktak. 全著作権所有 • 18歳以上限定 • support@taktakchat.com"}
 };
 const LANGS={en:"EN",hi:"हिंदी",ja:"日本語"};
 function pick(){return"en"}
