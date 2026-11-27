@@ -247,3 +247,22 @@ img.mark{width:36px;height:36px;border-radius:50%;background:radial-gradient(cir
 .fx-card .soon-tag{z-index:3;top:16px;right:16px}
 @media(max-width:900px){.fx-grid{grid-template-columns:1fr 1fr;gap:14px}.fx-card{padding:22px 16px}.orb{width:76px;height:76px}.orb img{width:66px;height:66px}.fx-card h3{font-size:18px}.fx-card p{font-size:13.5px}}
 @media(max-width:520px){.fx-grid{grid-template-columns:1fr}}
+/* ===== tango-style flowing 3D ribbons in empty space ===== */
+body{position:relative}
+.ribbons{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.rb{position:absolute;width:min(62vw,900px);opacity:.55;filter:saturate(1.1)}
+.rb1{right:-14vw;top:40px;transform:rotate(-8deg)}
+.rb2{left:-22vw;top:900px;transform:scaleX(-1) rotate(10deg);opacity:.45}
+.rb3{right:-20vw;top:1750px;transform:rotate(14deg);opacity:.4}
+.rb4{left:-18vw;top:2600px;transform:scaleX(-1) rotate(-6deg);opacity:.42}
+.rb5{right:-16vw;top:3450px;transform:rotate(-12deg);opacity:.38}
+.hero .wrap,section .wrap{z-index:2}
+@media(max-width:900px){.rb{width:120vw;opacity:.3}.rb1{right:-50vw}.rb2,.rb4{left:-60vw}.rb3,.rb5{right:-60vw}}
+.rb{height:auto;aspect-ratio:1}
+.rb{width:min(70vw,1000px);opacity:.85}
+.rb1{right:-10vw;top:260px;transform:rotate(-6deg)}
+.rb2{left:-16vw;top:980px;transform:scaleX(-1) rotate(8deg);opacity:.75}
+.rb3{right:-14vw;top:1800px;transform:rotate(12deg);opacity:.7}
+.rb4{left:-14vw;top:2650px;transform:scaleX(-1) rotate(-6deg);opacity:.7}
+.rb5{right:-12vw;top:3400px;transform:rotate(-10deg);opacity:.65}
+@media(max-width:900px){.rb{width:130vw;opacity:.45}}
