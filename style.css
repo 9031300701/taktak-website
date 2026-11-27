@@ -274,3 +274,38 @@ body{position:relative}
 .rb4{--r:-6deg;--sx:-1;animation-delay:-12s}
 .rb5{--r:-10deg;animation-delay:-2s}
 @keyframes drift{0%{transform:translate(0,0) rotate(var(--r)) scaleX(var(--sx,1))}100%{transform:translate(-2vw,24px) rotate(calc(var(--r) + 3deg)) scaleX(var(--sx,1))}}
+/* ===== 3D candy-glass feature cards to match 3D icons ===== */
+.fx-card{
+ background:
+  radial-gradient(120% 70% at 50% -10%,rgba(255,255,255,.22),transparent 55%),
+  linear-gradient(165deg,color-mix(in srgb,var(--c1) 38%,#3a1470) 0%,#2a0f55 45%,color-mix(in srgb,var(--c2) 34%,#1d0a3a) 100%);
+ border-radius:28px;backdrop-filter:none;
+ box-shadow:
+  inset 0 2px 0 rgba(255,255,255,.35),
+  inset 0 -14px 28px rgba(10,2,25,.45),
+  inset 0 0 0 1px rgba(255,255,255,.08),
+  0 10px 0 color-mix(in srgb,var(--c2) 40%,#14062b),
+  0 26px 40px rgba(10,2,25,.45)}
+.fx-card:hover{box-shadow:inset 0 2px 0 rgba(255,255,255,.4),inset 0 -14px 28px rgba(10,2,25,.45),inset 0 0 0 1px rgba(255,255,255,.1),0 14px 0 color-mix(in srgb,var(--c2) 45%,#14062b),0 34px 50px rgba(10,2,25,.5),0 0 50px color-mix(in srgb,var(--c1) 35%,transparent)}
+/* glossy top sheen instead of tech grid */
+.fx-card:after{background:linear-gradient(180deg,rgba(255,255,255,.16),rgba(255,255,255,0) 38%);background-size:auto;mask-image:none;border-radius:inherit}
+.fx-card:before{opacity:.55}
+.hud{display:none}
+/* 3D pedestal under icon */
+.orb{width:110px;height:104px}
+.orb:before{inset:auto 8px 6px;height:30px;border-radius:50%;filter:none;
+ background:radial-gradient(ellipse at 50% 35%,color-mix(in srgb,var(--c1) 85%,#fff) 0%,color-mix(in srgb,var(--c1) 60%,#5b21b6) 45%,#1d0a3a 100%);
+ box-shadow:0 6px 0 color-mix(in srgb,var(--c2) 50%,#14062b),0 0 28px color-mix(in srgb,var(--c1) 60%,transparent)}
+.orb:after{display:none}
+.orb img{width:92px;height:92px;margin-bottom:22px}
+/* funky type */
+.fx-card h3{font-family:"Baloo 2","Noto Sans Devanagari",sans-serif;font-weight:800;font-size:27px;line-height:1.15;letter-spacing:.2px;
+ background:linear-gradient(180deg,#fff 30%,color-mix(in srgb,var(--c1) 70%,#fff));-webkit-background-clip:text;background-clip:text;color:transparent;
+ filter:drop-shadow(0 3px 0 rgba(10,2,25,.45))}
+.fx-card p{font-family:"Baloo 2","Noto Sans Devanagari",sans-serif;font-weight:600;font-size:16px;line-height:1.45;color:rgba(255,255,255,.82)}
+.code{font-family:"Bungee",sans-serif;font-size:11px;letter-spacing:1.5px;color:var(--c1);text-shadow:0 2px 0 rgba(10,2,25,.5)}
+#features .head h2{font-family:"Baloo 2","Noto Sans Devanagari",sans-serif;font-weight:800;font-size:58px;letter-spacing:0;
+ text-shadow:0 4px 0 #ff5c8a,0 8px 0 #7c3aed,0 14px 24px rgba(10,2,25,.45)}
+#features .head h2 small{font-family:"Bungee",sans-serif;text-shadow:none;font-size:14px}
+#features .head p{font-family:"Baloo 2",sans-serif;font-weight:600;font-size:18px}
+@media(max-width:900px){#features .head h2{font-size:40px}.fx-card h3{font-size:22px}.orb img{width:76px;height:76px}}
