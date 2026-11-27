@@ -17,8 +17,8 @@ const T={
  sticker:{en:"Voice Party App",hi:"वॉइस पार्टी ऐप",ja:"ボイスパーティーアプリ"},
  h1:{en:'New <span class="hl">friends</span>,<br>real <span class="pk">talks.</span>',hi:'नए <span class="hl">दोस्त</span>,<br>असली <span class="pk">बातें।</span>',ja:'新しい<span class="hl">友だち</span>、<br>本当の<span class="pk">会話。</span>'},
  "hero.p":{en:"Join party rooms, chat, play games and connect with people you like – all with your voice.",hi:"पार्टी रूम में बैठिए, बात कीजिए, गेम खेलिए और अपनी पसंद के लोगों से जुड़िए – सब कुछ आवाज़ से।",ja:"パーティールームに参加して、話して、ゲームで遊んで、気の合う仲間とつながろう — すべて声で。"},
- "store.gp":{en:"GET IT ON · で入手",hi:"GET IT ON · で入手",ja:"で入手"},
- "store.apk":{en:"Direct download · ダウンロード",hi:"सीधे डाउनलोड · ダウンロード",ja:"直接ダウンロード"},
+ "store.gp":{en:"GET IT ON",hi:"GET IT ON",ja:"で入手"},
+ "store.apk":{en:"Direct download",hi:"सीधे डाउनलोड",ja:"直接ダウンロード"},
  "chip.free":{en:"🆓 Totally free",hi:"🆓 बिल्कुल फ्री",ja:"🆓 完全無料"},
  "chip.safe":{en:"🔒 Safe & 18+",hi:"🔒 सुरक्षित और 18+",ja:"🔒 安心・18歳以上"},
  "chip.rooms":{en:"🎙️ 24×7 party rooms",hi:"🎙️ 24×7 पार्टी रूम",ja:"🎙️ 24時間パーティールーム"},
@@ -70,15 +70,10 @@ const T={
  "fo.del":{en:"Delete Account",hi:"अकाउंट डिलीट",ja:"アカウント削除"},
  "fo.about":{en:"About Taktak",hi:"Taktak के बारे में",ja:"Taktakについて"},
  "fo.contact":{en:"Contact Us",hi:"संपर्क करें",ja:"お問い合わせ"},
- "fo.copy":{en:'© 2026 Taktak. All rights reserved. <span class="ja">全著作権所有</span> • 18+ users only • support@taktakchat.com',hi:'© 2026 Taktak. सर्वाधिकार सुरक्षित। <span class="ja">全著作権所有</span> • सिर्फ़ 18+ यूज़र्स के लिए • support@taktakchat.com',ja:"© 2026 Taktak. 全著作権所有 • 18歳以上限定 • support@taktakchat.com"}
+ "fo.copy":{en:'© 2026 Taktak. All rights reserved. • 18+ users only • support@taktakchat.com',hi:'© 2026 Taktak. सर्वाधिकार सुरक्षित। • सिर्फ़ 18+ यूज़र्स के लिए • support@taktakchat.com',ja:"© 2026 Taktak. 全著作権所有 • 18歳以上限定 • support@taktakchat.com"}
 };
 const LANGS={en:"EN",hi:"हिंदी",ja:"日本語"};
-function pick(){
- try{const s=localStorage.getItem("tt_lang");if(s&&T.title[s])return s}catch(e){}
- const ls=(navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||"en"]).map(l=>String(l).toLowerCase());
- for(const l of ls){if(l.startsWith("hi"))return"hi";if(l.startsWith("ja"))return"ja";if(l.startsWith("en"))return"en"}
- return"en";
-}
+function pick(){return"en"}
 function apply(lang){
  document.documentElement.lang=lang;document.documentElement.dataset.lang=lang;
  document.title=T.title[lang];
@@ -89,7 +84,7 @@ function apply(lang){
  document.querySelectorAll(".lang-cur").forEach(el=>el.textContent=LANGS[lang]);
  document.querySelectorAll("[data-l]").forEach(b=>b.classList.toggle("on",b.dataset.l===lang));
 }
-window.ttSetLang=function(l){try{localStorage.setItem("tt_lang",l)}catch(e){}apply(l)};
+window.ttSetLang=function(l){apply(l)};
 document.addEventListener("click",e=>{const b=e.target.closest("[data-l]");if(b){e.preventDefault();window.ttSetLang(b.dataset.l);const p=b.closest(".lang-pick");if(p)p.classList.remove("open")}
  const t=e.target.closest(".lang-toggle");if(t){e.preventDefault();t.closest(".lang-pick").classList.toggle("open")}
  else if(!e.target.closest(".lang-pick"))document.querySelectorAll(".lang-pick.open").forEach(p=>p.classList.remove("open"))});
