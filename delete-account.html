@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="hi"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Delete Account – Taktak</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<nav><div class="wrap"><a class="logo" href="index.html">Taktak</a></div></nav>
+<div class="doc">
+<h1>अकाउंट डिलीट करें</h1>
+<p>ऐप में: <b>प्रोफ़ाइल → सेटिंग → अकाउंट डिलीट</b>। या नीचे फ़ॉर्म भरें, 7 दिन में अकाउंट और डेटा हटा दिया जाएगा।</p>
+<form onsubmit="event.preventDefault();this.innerHTML='<p>✅ आपकी रिक्वेस्ट मिल गई है।</p>'">
+ <label>Taktak यूज़र ID</label><input required>
+ <label>मोबाइल नंबर</label><input required>
+ <label>कारण (ज़रूरी नहीं)</label><textarea rows="3"></textarea>
+ <button class="btn" style="border:0;cursor:pointer">रिक्वेस्ट भेजें</button>
+</form>
+</div></body></html>
