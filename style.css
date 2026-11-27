@@ -583,3 +583,4 @@ html[data-lang="ja"] .hero h1{letter-spacing:0;font-weight:900}
 html[data-lang="en"] .hero h1{font-family:"Baloo 2","Poppins",sans-serif}
 .hero-chips span span{all:unset}.hero-chips span .ja{display:inline;font-family:"Zen Maru Gothic",sans-serif;font-size:.8em;opacity:.7;margin-left:4px}
 @media(max-width:600px){.store small{white-space:nowrap;font-size:8.5px;letter-spacing:0}}
+.lang-pick.open .lang-menu{display:grid!important}
