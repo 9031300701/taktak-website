@@ -513,3 +513,25 @@ body .panel img.card.tapped{animation:none}
 }
 @media(max-width:360px){.hero h1{font-size:36px!important}.fx-grid{grid-template-columns:1fr!important}}
 section[id]{scroll-margin-top:84px}html{scroll-behavior:smooth}
+/* ===== Japanese aesthetic touches ===== */
+.jp,.jp-mini,.jp-label,.jp-vert,.jp-big,.hanko{font-family:"Zen Maru Gothic","Noto Sans JP",sans-serif}
+.jp{font-weight:900;color:#fff;opacity:.75;margin-left:6px;letter-spacing:1px}
+.head h2 small .jp{color:#ffd84d}
+.jp-mini{display:block;font-size:9px;letter-spacing:2px;opacity:.7;margin-top:-2px;font-weight:700}
+.sticker{flex-direction:row;flex-wrap:wrap}
+.sticker .jp-mini{flex-basis:100%;text-align:center}
+.jp-label{display:block;font-size:13px;letter-spacing:3px;color:#ffd84d;margin-bottom:8px;font-weight:900}
+/* hanko (red seal stamp) */
+.hanko{position:absolute;right:-26px;bottom:18%;z-index:2;width:46px;height:46px;border:2.5px solid #e11d48;color:#e11d48;border-radius:8px;background:rgba(255,240,240,.9);font-weight:900;font-size:12px;line-height:1.05;display:grid;place-items:center;text-align:center;transform:rotate(-10deg);box-shadow:0 4px 10px rgba(10,2,25,.3)}
+/* vertical Japanese calligraphy on hero sides */
+.jp-vert{position:absolute;writing-mode:vertical-rl;font-family:"Yuji Syuku","Zen Maru Gothic",serif;font-size:30px;letter-spacing:10px;color:rgba(255,255,255,.14);z-index:1;pointer-events:none;white-space:nowrap}
+.jv1{left:2.5%;top:22%}
+.jv2{right:2%;top:16%;font-size:24px;color:rgba(255,216,77,.16)}
+.jp-big{font-family:"Yuji Syuku",serif;font-size:22px;letter-spacing:6px;color:rgba(255,255,255,.55);margin:6px 0 2px}
+.band em.jp{font-style:normal;color:#fff;opacity:.85;margin:0}
+/* sakura petals */
+.sakura{position:fixed;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.sakura i{position:absolute;top:-30px;left:var(--x);width:14px;height:10px;border-radius:12px 0 12px 0;background:linear-gradient(135deg,#ffe4ef,#ff9ec4);opacity:.75;transform:scale(var(--s));animation:fall var(--d) linear infinite;animation-delay:var(--dl)}
+@keyframes fall{0%{translate:0 -5vh;rotate:0deg}50%{translate:6vw 50vh;rotate:200deg}100%{translate:-3vw 108vh;rotate:400deg}}
+@media(max-width:900px){.jp-vert{display:none}.hanko{right:-14px;width:38px;height:38px;font-size:10px}.sakura i:nth-child(n+8){display:none}}
+@media (prefers-reduced-motion:reduce){.sakura{display:none}}
