@@ -178,3 +178,30 @@ nav .bar{background:rgba(20,6,43,.85);backdrop-filter:blur(12px);border:1px soli
 /* band & footer */
 .band{background:var(--ink)}
 footer{background:#0f041f;color:var(--soft)}
+/* ===== official touches ===== */
+.logo{display:inline-flex;align-items:center;gap:8px}
+.mark{display:grid;place-items:center;width:32px;height:32px;border-radius:10px;background:linear-gradient(135deg,#ffd84d,#ff5c8a 55%,#7c3aed);color:#fff;font-style:normal;font-size:18px;font-weight:900;box-shadow:0 4px 12px rgba(255,92,138,.4)}
+.card.soon{opacity:.92}
+.card.soon i{filter:grayscale(.3)}
+.soon-tag{position:absolute;right:14px;top:14px;background:var(--lime);color:var(--ink);font-size:12px;font-weight:800;padding:3px 10px;border-radius:20px;z-index:2}
+.card.soon .no{top:44px}
+footer{padding:40px 0 30px}
+footer .wrap{display:block}
+.f-top{display:flex;justify-content:space-between;align-items:center;padding-bottom:22px;border-bottom:1px solid var(--line);margin-bottom:18px}
+.f-top .logo{color:#fff;font-size:22px}
+.social{display:flex;gap:10px}
+.social a{margin:0;width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.08);display:grid;place-items:center;transition:.2s}
+.social a:hover{background:var(--lime)}
+.social svg{width:18px;height:18px;fill:#fff}
+.social a:hover svg{fill:var(--ink)}
+.f-links{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;font-size:14px}
+.f-links a{margin:0}
+.f-links i{font-style:normal;opacity:.35}
+.drop{position:relative;cursor:pointer}
+.drop .menu{display:none;position:absolute;bottom:100%;left:-10px;background:#fff;color:var(--ink);border-radius:12px;padding:8px;min-width:170px;box-shadow:0 12px 30px rgba(0,0,0,.3);margin-bottom:8px}
+.drop:hover .menu,.drop:focus-within .menu{display:block}
+.drop .menu a{display:block;padding:7px 10px;border-radius:8px}
+.drop .menu a:hover{background:#f3ecff;color:var(--p)}
+.f-copy{margin-top:16px;font-size:12.5px;opacity:.6}
+.logo b{margin-left:-8px}
+.doc{border:0;border-radius:24px;box-shadow:0 20px 60px rgba(20,6,43,.35)}.doc input,.doc textarea{border:1px solid #ddd2f3;border-radius:12px}
