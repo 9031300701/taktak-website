@@ -128,3 +128,19 @@ footer a:hover{color:var(--lime)}
  .side-text{display:none}
  .doc{margin:90px 10px 40px;padding:26px 18px}
 }
+/* ===== purple→pink site theme ===== */
+body{background:linear-gradient(135deg,#6d28d9 0%,#a21caf 50%,#ff3d9a 100%) fixed;color:#fff}
+.stripes{background:repeating-linear-gradient(-55deg,transparent 0 120px,rgba(255,255,255,.06) 120px 200px)}
+.hero p,.head p,.dl p{color:rgba(255,255,255,.85)}
+.hero h1 .hl{color:var(--ink)}
+.hero h1 .pk{color:var(--lime)}
+.head h2 small{color:var(--lime)}
+.side-text{color:rgba(255,255,255,.5)}
+.panel .bg{background:var(--ink)}
+.panel .bg:after{color:rgba(212,255,42,.12)}
+.store{border-color:#fff}
+.card,.safe,.reel figure,.doc{color:var(--ink)}
+.reel figure{box-shadow:6px 6px 0 var(--ink)}
+.reel::-webkit-scrollbar-thumb{background:#fff}
+.band{box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.tag,.store.alt{color:var(--ink)}
