@@ -31,8 +31,9 @@
 </div>
 <nav><div class="wrap"><div class="bar">
  <a class="logo" href="index.html"><img class="mark" src="img/owl.png" alt="Taktakchat">Taktak<b>chat</b></a>
- <div class="links"><a class="on" href="#">होम</a><a href="#screens">झलक</a><a href="#features">फीचर</a><a href="#host">होस्ट बनें</a><a href="about.html">हमारे बारे में</a><span class="lang">🌐 हिंदी</span><a class="btn" href="#download">⬇ App</a></div>
-</div></div></nav>
+ <div class="links"><a class="on" href="#">होम</a><a href="#screens">झलक</a><a href="#features">फीचर</a><a href="#host">होस्ट बनें</a><a href="about.html">हमारे बारे में</a><span class="lang">🌐 हिंदी</span><a class="btn" href="#download">⬇ App</a><button class="menu-btn" aria-label="मेन्यू" aria-expanded="false"><span></span><span></span><span></span></button></div>
+</div></div>
+<div class="mnav" hidden><a href="#screens">📱 झलक</a><a href="#features">✨ फीचर</a><a href="#host">💎 होस्ट बनें</a><a href="about.html">🦉 हमारे बारे में</a><a href="#download" class="btn">⬇ ऐप डाउनलोड करें</a></div></nav>
 
 <header class="hero">
  <div class="treeline"></div>
@@ -131,7 +132,7 @@
  </div>
  <div class="f-links">
   <a href="terms.html">नियम व शर्तें</a><i>|</i><a href="privacy.html">प्राइवेसी</a><i>|</i>
-  <span class="drop">पॉलिसी ▴<span class="menu"><a href="guidelines.html">कम्युनिटी नियम</a><a href="privacy.html">प्राइवेसी पॉलिसी</a><a href="terms.html">यूज़र एग्रीमेंट</a><a href="delete-account.html">अकाउंट डिलीट</a></span></span><i>|</i>
+  <span class="drop" tabindex="0">पॉलिसी ▴<span class="menu"><a href="guidelines.html">कम्युनिटी नियम</a><a href="privacy.html">प्राइवेसी पॉलिसी</a><a href="terms.html">यूज़र एग्रीमेंट</a><a href="delete-account.html">अकाउंट डिलीट</a></span></span><i>|</i>
   <a href="about.html">Taktak के बारे में</a><i>|</i><a href="mailto:support@taktakchat.com">संपर्क करें</a><i>|</i><span>🌐 हिंदी</span>
  </div>
  <p class="f-copy">© 2026 Taktak. सर्वाधिकार सुरक्षित। • सिर्फ़ 18+ यूज़र्स के लिए • support@taktakchat.com</p>
@@ -178,5 +179,10 @@ document.querySelectorAll(".fx-card,.reel figure,.btn,.store").forEach(el=>{
  cards.forEach((c,i)=>c.addEventListener("click",()=>{let g=0;while(pos[i]!==1&&g++<3)next()}));
  panel.addEventListener("pointermove",e=>{const r=panel.getBoundingClientRect();panel.style.setProperty("--ry",((e.clientX-r.left)/r.width-.5)*10+"deg");panel.style.setProperty("--rx",(-(e.clientY-r.top)/r.height+.5)*8+"deg")});
 })();
+</script>
+<script>
+(()=>{const b=document.querySelector(".menu-btn"),m=document.querySelector(".mnav");if(!b)return;
+ const set=o=>{m.hidden=!o;b.setAttribute("aria-expanded",o);b.classList.toggle("open",o)};
+ b.addEventListener("click",()=>set(m.hidden));m.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>set(false)));})();
 </script>
 </body></html>
