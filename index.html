@@ -50,9 +50,11 @@
   </div>
   <div class="panel">
    <div class="glow"></div>
-   <img src="img/s4.webp" alt="Taktak प्रोफ़ाइल">
-   <img src="img/s2.webp" alt="Taktak पार्टी रूम">
-   <img src="img/s1.webp" alt="Taktak चैट">
+   <div class="stack init">
+    <img class="card pos-l" src="img/s4.webp" alt="Taktak प्रोफ़ाइल" style="--d:.15s">
+    <img class="card pos-c" src="img/s2.webp" alt="Taktak पार्टी रूम" style="--d:0s">
+    <img class="card pos-r" src="img/s1.webp" alt="Taktak चैट" style="--d:.3s">
+   </div>
   </div>
  </div>
 </header>
@@ -161,5 +163,20 @@ document.querySelectorAll(".fx-card,.reel figure,.btn,.store,.panel img").forEac
  reel.querySelectorAll("figure").forEach((f,i)=>f.style.setProperty("--i",i));
  reel.classList.add("pre");
  new IntersectionObserver((es,o)=>es.forEach(e=>{if(e.isIntersecting){reel.scrollLeft=0;reel.classList.add("in");o.disconnect();const fs=reel.querySelectorAll("figure");fs[fs.length-1].addEventListener("animationend",()=>{reel.classList.add("done");reel.scrollLeft=0},{once:true})}}),{threshold:.25}).observe(reel);})();
+</script>
+<script>
+/* hero stack: deal-in, auto-rotate front card, click to bring front, mouse tilt */
+(()=>{const st=document.querySelector(".stack");if(!st)return;const cards=[...st.querySelectorAll(".card")];
+ const P=["pos-l","pos-c","pos-r"];let pos=[0,1,2];
+ const apply=()=>cards.forEach((c,i)=>{c.classList.remove(...P);c.classList.add(P[pos[i]])});
+ requestAnimationFrame(()=>setTimeout(()=>st.classList.remove("init"),250));
+ const next=()=>{pos=pos.map(p=>p===2?1:p===1?0:2);apply()};
+ let t=setInterval(next,4200);
+ const panel=st.closest(".panel");
+ panel.addEventListener("mouseenter",()=>clearInterval(t));
+ panel.addEventListener("mouseleave",()=>{clearInterval(t);t=setInterval(next,4200);panel.style.setProperty("--rx","0deg");panel.style.setProperty("--ry","0deg")});
+ cards.forEach((c,i)=>c.addEventListener("click",()=>{let g=0;while(pos[i]!==1&&g++<3)next()}));
+ panel.addEventListener("pointermove",e=>{const r=panel.getBoundingClientRect();panel.style.setProperty("--ry",((e.clientX-r.left)/r.width-.5)*10+"deg");panel.style.setProperty("--rx",(-(e.clientY-r.top)/r.height+.5)*8+"deg")});
+})();
 </script>
 </body></html>
