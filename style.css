@@ -535,3 +535,51 @@ section[id]{scroll-margin-top:84px}html{scroll-behavior:smooth}
 @keyframes fall{0%{translate:0 -5vh;rotate:0deg}50%{translate:6vw 50vh;rotate:200deg}100%{translate:-3vw 108vh;rotate:400deg}}
 @media(max-width:900px){.jp-vert{display:none}.hanko{right:-14px;width:38px;height:38px;font-size:10px}.sakura i:nth-child(n+8){display:none}}
 @media (prefers-reduced-motion:reduce){.sakura{display:none}}
+/* ===== stack v2: big front card, slim side peeks ===== */
+body .panel img.card.pos-c{--s:1.22;--ty:-2%}
+body .panel img.card.pos-l{--tx:-50%;--ty:4%;--rot:-8deg;--s:.72}
+body .panel img.card.pos-r{--tx:50%;--ty:4%;--rot:7deg;--s:.72}
+body .panel img.card.pos-l,body .panel img.card.pos-r{opacity:.7}
+@media(max-width:600px){
+ .panel{height:440px}
+ body .panel img.card{width:190px}
+ body .panel img.card.pos-c{--s:1.08;--ty:0%}
+ body .panel img.card.pos-l{--tx:-42%;--s:.66}
+ body .panel img.card.pos-r{--tx:42%;--s:.66}
+}
+/* ===== Japanese secondary lines ===== */
+.ja{display:block;font-family:"Zen Maru Gothic","Noto Sans JP",sans-serif;font-weight:700;font-size:.72em;letter-spacing:1.5px;opacity:.72;margin-top:2px;line-height:1.4}
+.ja-lead{font-family:"Zen Maru Gothic",sans-serif;font-weight:900;font-size:17px;letter-spacing:4px;color:#ffd84d;margin:8px 0 4px;opacity:.9}
+.hero-chips span .ja,.safe .ja{display:inline;margin-left:4px;font-size:.8em}
+.safe .ja{display:block;margin:2px 0 0}
+.fx-card .ja{position:relative;z-index:1;color:var(--c1);opacity:.9;font-size:12px;margin:-2px 0 6px}
+.reel figcaption .ja{font-size:11px;color:#ffd84d}
+.steps div span .ja{font-size:11px}
+.head p .ja{font-size:13px;color:#ffd84d}
+.nja{display:block;font-style:normal;font-family:"Zen Maru Gothic",sans-serif;font-size:9px;letter-spacing:1px;opacity:.6;text-align:center;line-height:1;margin-top:1px}
+nav .links a:hover .nja{opacity:.9}
+.f-copy .ja{display:inline;font-size:1em}
+@media(max-width:600px){.ja-lead{font-size:14px;letter-spacing:2px}.fx-card .ja{font-size:10.5px}}
+/* ===== language picker ===== */
+.lang-pick{position:relative}
+.lang-toggle{background:transparent;color:#ddd;border:1px solid rgba(255,255,255,.18);border-radius:30px;padding:7px 12px;font:inherit;font-size:13px;font-weight:600;cursor:pointer}
+.lang-toggle:hover{color:#fff;border-color:rgba(255,255,255,.4)}
+.lang-menu{display:none;position:absolute;right:0;top:calc(100% + 8px);background:#fff;border-radius:14px;padding:6px;min-width:140px;box-shadow:0 14px 34px rgba(10,2,25,.35);z-index:60}
+.lang-pick.open .lang-menu{display:grid}
+.lang-menu button,.mlang button,.flang button{font:inherit;cursor:pointer;border:0;background:transparent}
+.lang-menu button{text-align:left;padding:9px 12px;border-radius:9px;color:var(--ink);font-weight:600;font-size:14px}
+.lang-menu button:hover{background:#f3ecff}
+.lang-menu button.on{background:#f3ecff;color:var(--p)}
+.mlang{display:flex;align-items:center;gap:6px;padding:8px 10px}
+.mlang button{color:#fff;padding:7px 12px;border-radius:20px;border:1px solid rgba(255,255,255,.2);font-weight:700;font-size:14px}
+.mlang button.on{background:#ffd84d;color:var(--ink);border-color:#ffd84d}
+.flang button{color:inherit;font-size:14px;padding:0}
+.flang button.on{color:#ffd84d;font-weight:700}
+@media(max-width:900px){.lang-pick{display:none}}
+/* Japanese mode: drop duplicate JP helper lines, use JP font */
+html[data-lang="ja"] .ja,html[data-lang="ja"] .jp-mini,html[data-lang="ja"] .nja,html[data-lang="ja"] .ja-lead,html[data-lang="ja"] .jp{display:none!important}
+html[data-lang="ja"] body,html[data-lang="ja"] .fx-card h3,html[data-lang="ja"] .fx-card p,html[data-lang="ja"] .hero h1,html[data-lang="ja"] h2{font-family:"Zen Maru Gothic","Noto Sans JP","Poppins",sans-serif}
+html[data-lang="ja"] .hero h1{letter-spacing:0;font-weight:900}
+html[data-lang="en"] .hero h1{font-family:"Baloo 2","Poppins",sans-serif}
+.hero-chips span span{all:unset}.hero-chips span .ja{display:inline;font-family:"Zen Maru Gothic",sans-serif;font-size:.8em;opacity:.7;margin-left:4px}
+@media(max-width:600px){.store small{white-space:nowrap;font-size:8.5px;letter-spacing:0}}

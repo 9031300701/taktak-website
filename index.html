@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Taktak – वॉइस पार्टी और नए दोस्त</title>
-<meta name="description" content="Taktak – वॉइस पार्टी रूम में नए दोस्त बनाइए, लाइव जाइए, गिफ्ट भेजिए और होस्ट बनकर कमाइए। 18+ सुरक्षित सोशल ऐप।">
+<title>Taktak – Voice Party &amp; New Friends</title>
+<meta name="description" content="Taktak – make new friends in voice party rooms, send gifts and earn as a host. A safe 18+ social app.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;0,800;0,900;1,900&family=Baloo+2:wght@600;700;800&family=Bungee&family=Zen+Maru+Gothic:wght@700;900&family=Yuji+Syuku&family=Noto+Sans+Devanagari:wght@400;600;800;900&display=swap" rel="stylesheet">
-<link rel="icon" href="favicon.png"><link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.png"><script src="i18n.js" defer></script><link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="stripes"></div>
@@ -32,9 +32,9 @@
 </div>
 <nav><div class="wrap"><div class="bar">
  <a class="logo" href="index.html"><img class="mark" src="img/owl.png" alt="Taktakchat">Taktak<b>chat</b></a>
- <div class="links"><a class="on" href="#">होम</a><a href="#screens">झलक</a><a href="#features">फीचर</a><a href="#host">होस्ट बनें</a><a href="about.html">हमारे बारे में</a><span class="lang">🌐 हिंदी</span><a class="btn" href="#download">⬇ App</a><button class="menu-btn" aria-label="मेन्यू" aria-expanded="false"><span></span><span></span><span></span></button></div>
+ <div class="links"><a class="on" href="#"><span data-i="nav.home">Home</span></a><a href="#screens"><span data-i="nav.preview">Preview</span><i class="nja">プレビュー</i></a><a href="#features"><span data-i="nav.features">Features</span><i class="nja">機能</i></a><a href="#host"><span data-i="nav.host">Become a Host</span><i class="nja">ホスト</i></a><a href="about.html"><span data-i="nav.about">About Us</span></a><div class="lang-pick"><button class="lang lang-toggle" aria-label="Language">🌐 <span class="lang-cur">EN</span> ▾</button><div class="lang-menu"><button data-l="en">English</button><button data-l="hi">हिंदी</button><button data-l="ja">日本語</button></div></div><a class="btn" href="#download">⬇ App</a><button class="menu-btn" aria-label="Menu" data-ia="menu" aria-expanded="false"><span></span><span></span><span></span></button></div>
 </div></div>
-<div class="mnav" hidden><a href="#screens">📱 झलक</a><a href="#features">✨ फीचर</a><a href="#host">💎 होस्ट बनें</a><a href="about.html">🦉 हमारे बारे में</a><a href="#download" class="btn">⬇ ऐप डाउनलोड करें</a></div></nav>
+<div class="mnav" hidden><a href="#screens" data-i="m.preview">📱 Preview</a><a href="#features" data-i="m.features">✨ Features</a><a href="#host" data-i="m.host">💎 Become a Host</a><a href="about.html" data-i="m.about">🦉 About Us</a><div class="mlang"><span>🌐</span><button data-l="en">English</button><button data-l="hi">हिंदी</button><button data-l="ja">日本語</button></div><a href="#download" class="btn" data-i="m.download">⬇ Download the App</a></div></nav>
 
 <header class="hero">
  <div class="treeline"></div>
@@ -42,84 +42,81 @@
  <span class="side-text">TAKTAK • VOICE PARTY • MAKE FRIENDS • 2026</span>
  <div class="wrap">
   <div>
-   <span class="logo-wrap"><canvas class="sv rays" data-svga="anim/avatar_gifts.svga"></canvas><img class="hero-logo" src="img/logo-full.png" alt="Taktakchat लोगो"><span class="hanko" aria-hidden="true">タク<br>タク</span></span><br><span class="sticker"><canvas class="sv eq" data-svga="anim/bgm_playing_h.svga"></canvas>वॉइस पार्टी ऐप<span class="jp-mini">ボイスパーティー</span></span>
-   <h1>नए <span class="hl">दोस्त</span>,<br>असली <span class="pk">बातें।</span></h1>
-   <p>पार्टी रूम में बैठिए, बात कीजिए, गेम खेलिए और अपनी पसंद के लोगों से जुड़िए – सब कुछ आवाज़ से।</p>
+   <span class="logo-wrap"><img class="hero-logo" src="img/logo-full.png" alt="Taktakchat logo"><span class="hanko" aria-hidden="true">タク<br>タク</span></span><br><span class="sticker"><canvas class="sv eq" data-svga="anim/bgm_playing_h.svga"></canvas><span data-i="sticker">Voice Party App</span><span class="jp-mini">ボイスパーティー</span></span>
+   <p class="ja-lead">新しい友だち、本当の会話。</p><h1 data-ih="h1">New <span class="hl">friends</span>,<br>real <span class="pk">talks.</span></h1>
+   <p><span data-i="hero.p">Join party rooms, chat, play games and connect with people you like – all with your voice.</span><br><span class="ja">パーティールームで話そう、遊ぼう、つながろう。</span></p>
    <div class="stores">
-    <a class="store" href="#"><svg viewBox="0 0 24 24"><path d="M3.6 1.8 13.4 12 3.6 22.2c-.4-.2-.6-.7-.6-1.2V3c0-.5.2-1 .6-1.2zm11 11.4 2.6 2.6-11 6.3 8.4-8.9zm3.9-3.9 3 1.7c.9.5.9 1.6 0 2.1l-3 1.7-2.9-2.8 2.9-2.7zM6.2 1.9l11 6.3-2.6 2.6-8.4-8.9z"/></svg><span><small>GET IT ON</small><b>Google Play</b></span></a>
-    <a class="store alt" href="#"><svg viewBox="0 0 24 24"><path d="M12 3v11.2l4-4 1.4 1.4L12 17l-5.4-5.4L8 10.2l4 4V3h0zM4 19h16v2H4z"/></svg><span><small>सीधे डाउनलोड</small><b>APK Download</b></span></a>
+    <a class="store" href="#"><svg viewBox="0 0 24 24"><path d="M3.6 1.8 13.4 12 3.6 22.2c-.4-.2-.6-.7-.6-1.2V3c0-.5.2-1 .6-1.2zm11 11.4 2.6 2.6-11 6.3 8.4-8.9zm3.9-3.9 3 1.7c.9.5.9 1.6 0 2.1l-3 1.7-2.9-2.8 2.9-2.7zM6.2 1.9l11 6.3-2.6 2.6-8.4-8.9z"/></svg><span><small data-i="store.gp">GET IT ON · で入手</small><b>Google Play</b></span></a>
+    <a class="store alt" href="#"><svg viewBox="0 0 24 24"><path d="M12 3v11.2l4-4 1.4 1.4L12 17l-5.4-5.4L8 10.2l4 4V3h0zM4 19h16v2H4z"/></svg><span><small data-i="store.apk">Direct download · ダウンロード</small><b>APK Download</b></span></a>
    </div>
-   <div class="hero-chips"><span>🆓 बिल्कुल फ्री</span><span>🔒 सुरक्षित और 18+</span><span>🎙️ 24×7 पार्टी रूम</span></div>
+   <div class="hero-chips"><span><span data-i="chip.free">🆓 Totally free</span> <span class="ja">無料</span></span><span><span data-i="chip.safe">🔒 Safe &amp; 18+</span> <span class="ja">安心</span></span><span><span data-i="chip.rooms">🎙️ 24×7 party rooms</span> <span class="ja">24時間</span></span></div>
   </div>
   <div class="panel">
    <div class="glow"></div>
    <div class="stack init">
-    <img draggable="false" class="card pos-l" src="img/s4.webp" alt="Taktak प्रोफ़ाइल" style="--d:.15s">
-    <img draggable="false" class="card pos-c" src="img/s2.webp" alt="Taktak पार्टी रूम" style="--d:0s">
-    <img draggable="false" class="card pos-r" src="img/s1.webp" alt="Taktak चैट" style="--d:.3s">
+    <img draggable="false" class="card pos-l" src="img/s4.webp" alt="Taktak profile" style="--d:.15s">
+    <img draggable="false" class="card pos-c" src="img/s2.webp" alt="Taktak party room" style="--d:0s">
+    <img draggable="false" class="card pos-r" src="img/s1.webp" alt="Taktak chat" style="--d:.3s">
    </div>
   </div>
  </div>
 </header>
 
-<div class="band"><div>
- वॉइस पार्टी<span>✦</span><em class="jp">パーティー</em><span>✦</span>नए दोस्त<span>✦</span>वीडियो लाइव – जल्द<span>✦</span>गिफ्ट<span>✦</span>गेम<span>✦</span>होस्ट बनो<span>✦</span>
- वॉइस पार्टी<span>✦</span><em class="jp">パーティー</em><span>✦</span>नए दोस्त<span>✦</span>वीडियो लाइव – जल्द<span>✦</span>गिफ्ट<span>✦</span>गेम<span>✦</span>होस्ट बनो<span>✦</span>
-</div></div>
+<div class="band"><div><span data-ih="band">Voice Party<span>✦</span><em class="jp">パーティー</em><span>✦</span>New Friends<span>✦</span>Video Live – Soon<span>✦</span>Gifts<span>✦</span>Games<span>✦</span>Become a Host<span>✦</span></span><span data-ih="band" aria-hidden="true">Voice Party<span>✦</span><em class="jp">パーティー</em><span>✦</span>New Friends<span>✦</span>Video Live – Soon<span>✦</span>Gifts<span>✦</span>Games<span>✦</span>Become a Host<span>✦</span></span></div></div>
 
 <section id="screens"><div class="wrap">
- <div class="head"><h2><small>APP PREVIEW <span class="jp">プレビュー</span></small>ऐप की झलक</h2><p>बाएँ-दाएँ खिसकाकर देखिए, Taktak के अंदर क्या-क्या है।</p></div>
+ <div class="head"><h2><small>APP PREVIEW <span class="jp">プレビュー</span></small><span data-i="scr.h">App Preview</span></h2><p><span data-i="scr.p">Swipe left and right to see what's inside Taktak.</span><br><span class="ja">スワイプして見てね</span></p></div>
  <div class="reel">
-  <figure><img src="img/s2.webp" alt="पार्टी रूम"><figcaption>🎉 पार्टी रूम</figcaption></figure>
-  <figure><img src="img/s4.webp" alt="प्रोफ़ाइल"><figcaption>🪪 असली प्रोफ़ाइल</figcaption></figure>
-  <figure><img src="img/s3.webp" alt="लाइव चैट"><figcaption>💬 24 घंटे लाइव चैट</figcaption></figure>
-  <figure><img src="img/s1.webp" alt="चैट"><figcaption>✉️ प्राइवेट चैट</figcaption></figure>
-  <figure><img src="img/s5.webp" alt="मोमेंट्स"><figcaption>📸 अपने पल शेयर करें</figcaption></figure>
+  <figure><img src="img/s2.webp" alt="Party room"><figcaption><span data-i="cap.party">🎉 Party Room</span><span class="ja">パーティールーム</span></figcaption></figure>
+  <figure><img src="img/s4.webp" alt="Profile"><figcaption><span data-i="cap.profile">🪪 Real Profiles</span><span class="ja">プロフィール</span></figcaption></figure>
+  <figure><img src="img/s3.webp" alt="Live chat"><figcaption><span data-i="cap.live">💬 24h Live Chat</span><span class="ja">24時間チャット</span></figcaption></figure>
+  <figure><img src="img/s1.webp" alt="Chat"><figcaption><span data-i="cap.chat">✉️ Private Chat</span><span class="ja">メッセージ</span></figcaption></figure>
+  <figure><img src="img/s5.webp" alt="Moments"><figcaption><span data-i="cap.moments">📸 Share your moments</span><span class="ja">モーメント</span></figcaption></figure>
  </div>
 </div></section>
 
 <section id="features" class="fx"><div class="wrap">
- <div class="head"><h2><small>FEATURES <span class="jp">機能</span></small>Taktak में क्या है?</h2><p>बात करने, सुनने और नए लोगों से जुड़ने के सबसे मज़ेदार तरीके।</p></div>
+ <div class="head"><h2><small>FEATURES <span class="jp">機能</span></small><span data-i="ft.h">What's in Taktak?</span></h2><p><span data-i="ft.p">The most fun ways to talk, listen and meet new people.</span><br><span class="ja">話す・聴く・つながる</span></p></div>
  <div class="fx-grid">
   <article class="fx-card" style="--c1:#ffd84d;--c2:#ff9f43"><span class="hud tl"></span><span class="hud br"></span>
-   <div class="orb"><img src="img/ic/mic3d.png" alt=""></div><span class="code">01 · VOICE ROOM</span><h3>वॉइस पार्टी रूम</h3><p>अपना रूम बनाइए या किसी के रूम में सीट लेकर बात कीजिए।</p></article>
-  <article class="fx-card soon" style="--c1:#ff5c8a;--c2:#a855f7"><span class="soon-tag">जल्द आ रहा है</span><span class="hud tl"></span><span class="hud br"></span>
-   <div class="orb"><img src="img/ic/video3d.png" alt=""></div><span class="code">02 · VIDEO LIVE</span><h3>वीडियो लाइव</h3><p>वीडियो पर लाइव जाने का फीचर जल्द आ रहा है। अभी वॉइस पार्टी का मज़ा लीजिए।</p></article>
+   <div class="orb"><img src="img/ic/mic3d.png" alt=""></div><span class="code">01 · VOICE ROOM</span><h3 data-i="f1.h">Voice Party Room</h3><span class="ja">ボイスルーム</span><p data-i="f1.p">Create your own room or take a seat in someone's room and chat.</p></article>
+  <article class="fx-card soon" style="--c1:#ff5c8a;--c2:#a855f7"><span class="soon-tag" data-i="soon">Coming soon</span><span class="hud tl"></span><span class="hud br"></span>
+   <div class="orb"><img src="img/ic/video3d.png" alt=""></div><span class="code">02 · VIDEO LIVE</span><h3 data-i="f2.h">Video Live</h3><span class="ja">ビデオライブ・近日公開</span><p data-i="f2.p">Going live on video is coming soon. Enjoy voice parties for now.</p></article>
   <article class="fx-card" style="--c1:#ff5c8a;--c2:#ffd84d"><span class="hud tl"></span><span class="hud br"></span>
-   <div class="orb"><img src="img/ic/gift3d.png" alt=""></div><span class="code">03 · GIFTS</span><h3>शानदार गिफ्ट</h3><p>पसंदीदा होस्ट को एनिमेटेड गिफ्ट भेजिए।</p></article>
+   <div class="orb"><img src="img/ic/gift3d.png" alt=""></div><span class="code">03 · GIFTS</span><h3 data-i="f3.h">Amazing Gifts</h3><span class="ja">ギフト</span><p data-i="f3.p">Send animated gifts to your favourite hosts.</p></article>
   <article class="fx-card" style="--c1:#a855f7;--c2:#ff5c8a"><span class="hud tl"></span><span class="hud br"></span>
-   <div class="orb"><img src="img/ic/chat3d.png" alt=""></div><span class="code">04 · PRIVATE CHAT</span><h3>प्राइवेट चैट</h3><p>जिनसे बात अच्छी लगी, उनसे सीधे मैसेज में जुड़िए।</p></article>
+   <div class="orb"><img src="img/ic/chat3d.png" alt=""></div><span class="code">04 · PRIVATE CHAT</span><h3 data-i="f4.h">Private Chat</h3><span class="ja">プライベートチャット</span><p data-i="f4.p">Connect directly by message with people you enjoyed talking to.</p></article>
   <article class="fx-card" style="--c1:#38bdf8;--c2:#a855f7"><span class="hud tl"></span><span class="hud br"></span>
-   <div class="orb"><img src="img/ic/game3d.png" alt=""></div><span class="code">05 · ROOM GAMES</span><h3>रूम गेम</h3><p>पार्टी में दोस्तों के साथ मज़ेदार गेम खेलिए।</p></article>
+   <div class="orb"><img src="img/ic/game3d.png" alt=""></div><span class="code">05 · ROOM GAMES</span><h3 data-i="f5.h">Room Games</h3><span class="ja">ルームゲーム</span><p data-i="f5.p">Play fun games with friends at the party.</p></article>
   <article class="fx-card" style="--c1:#ffd84d;--c2:#ff5c8a"><span class="hud tl"></span><span class="hud br"></span>
-   <div class="orb"><img src="img/ic/camera3d.png" alt=""></div><span class="code">06 · MOMENTS</span><h3>मोमेंट्स</h3><p>अपनी फ़ोटो और पल शेयर कीजिए, लाइक-कमेंट पाइए।</p></article>
+   <div class="orb"><img src="img/ic/camera3d.png" alt=""></div><span class="code">06 · MOMENTS</span><h3 data-i="f6.h">Moments</h3><span class="ja">モーメント</span><p data-i="f6.p">Share your photos and moments, get likes and comments.</p></article>
  </div>
 </div></section>
 
 <section style="padding-top:0"><div class="wrap">
  <div class="safe">
-  <div><b>18+</b>सिर्फ़ बालिग़ों के लिए</div>
-  <div><b>24×7</b>मॉडरेशन टीम</div>
-  <div><b>🛡️</b>रिपोर्ट और ब्लॉक</div>
-  <div><b>🔒</b>आपका डेटा सुरक्षित</div>
+  <div><b>18+</b><span data-i="s1">Adults only</span><span class="ja">18歳以上</span></div>
+  <div><b>24×7</b><span data-i="s2">Moderation team</span><span class="ja">見守りチーム</span></div>
+  <div><b>🛡️</b><span data-i="s3">Report &amp; block</span><span class="ja">通報・ブロック</span></div>
+  <div><b>🔒</b><span data-i="s4">Your data is safe</span><span class="ja">データ保護</span></div>
  </div>
 </div></section>
 
 <section id="host"><div class="wrap"><div class="host">
  <div>
-  <small class="jp-label">ホスト募集 · HOST</small><h2>होस्ट बनिए,<br><em class="earn"><canvas class="sv coin" data-svga="anim/coin.svga"></canvas>कमाई</em> कीजिए</h2>
-  <p>बात कीजिए, गिफ्ट पाइए, डायमंड जमा कीजिए और पैसे निकालिए। एजेंसी से जुड़कर और ज़्यादा कमाइए।</p>
-  <a class="btn" href="#download">अभी शुरू करें →</a>
+  <small class="jp-label">ホスト募集 · HOST</small><h2><span data-i="host.t1">Become a host,</span><br><em class="earn"><canvas class="sv coin" data-svga="anim/coin.svga"></canvas><span data-i="host.t2">earn</span></em><span data-i="host.t3"> big</span></h2>
+  <p data-i="host.p">Talk, receive gifts, collect diamonds and withdraw money. Join an agency to earn even more.</p>
+  <a class="btn" href="#download" data-i="host.btn">Start now →</a>
  </div>
- <div class="steps"><div><b>1</b>ऐप डाउनलोड करें</div><div><b>2</b>रूम में बात करें</div><div><b>3</b>गिफ्ट से कमाएँ</div></div>
+ <div class="steps"><div><b>1</b><span><span data-i="st1">Download the app</span><span class="ja">アプリをダウンロード</span></span></div><div><b>2</b><span><span data-i="st2">Talk in rooms</span><span class="ja">ルームで話す</span></span></div><div><b>3</b><span><span data-i="st3">Earn with gifts</span><span class="ja">ギフトで稼ぐ</span></span></div></div>
 </div></div></section>
 
 <section id="download" class="dl"><div class="treeline"></div><div class="wrap">
  <canvas class="sv heart" data-svga="anim/votaky_voice_sweetheart.svga"></canvas><br><span class="sticker">FREE • ANDROID</span>
- <p class="jp-big" aria-hidden="true">いらっしゃいませ！</p><h2>पार्टी में आ जाइए!</h2><p>आज ही Taktak डाउनलोड कीजिए, बिल्कुल फ्री।</p>
+ <p class="jp-big" aria-hidden="true">いらっしゃいませ！</p><h2 data-i="dl.h">Join the party!</h2><p><span data-i="dl.p">Download Taktak today – totally free.</span><br><span class="ja">今すぐ無料でダウンロード</span></p>
  <div class="stores">
-  <a class="store" href="#"><svg viewBox="0 0 24 24"><path d="M3.6 1.8 13.4 12 3.6 22.2c-.4-.2-.6-.7-.6-1.2V3c0-.5.2-1 .6-1.2zm11 11.4 2.6 2.6-11 6.3 8.4-8.9zm3.9-3.9 3 1.7c.9.5.9 1.6 0 2.1l-3 1.7-2.9-2.8 2.9-2.7zM6.2 1.9l11 6.3-2.6 2.6-8.4-8.9z"/></svg><span><small>GET IT ON</small><b>Google Play</b></span></a>
-  <a class="store alt" href="#"><svg viewBox="0 0 24 24"><path d="M12 3v11.2l4-4 1.4 1.4L12 17l-5.4-5.4L8 10.2l4 4V3h0zM4 19h16v2H4z"/></svg><span><small>सीधे डाउनलोड</small><b>APK Download</b></span></a>
+  <a class="store" href="#"><svg viewBox="0 0 24 24"><path d="M3.6 1.8 13.4 12 3.6 22.2c-.4-.2-.6-.7-.6-1.2V3c0-.5.2-1 .6-1.2zm11 11.4 2.6 2.6-11 6.3 8.4-8.9zm3.9-3.9 3 1.7c.9.5.9 1.6 0 2.1l-3 1.7-2.9-2.8 2.9-2.7zM6.2 1.9l11 6.3-2.6 2.6-8.4-8.9z"/></svg><span><small data-i="store.gp">GET IT ON · で入手</small><b>Google Play</b></span></a>
+  <a class="store alt" href="#"><svg viewBox="0 0 24 24"><path d="M12 3v11.2l4-4 1.4 1.4L12 17l-5.4-5.4L8 10.2l4 4V3h0zM4 19h16v2H4z"/></svg><span><small data-i="store.apk">Direct download · ダウンロード</small><b>APK Download</b></span></a>
  </div>
 </div></section>
 
@@ -133,11 +130,11 @@
   </div>
  </div>
  <div class="f-links">
-  <a href="terms.html">नियम व शर्तें</a><i>|</i><a href="privacy.html">प्राइवेसी</a><i>|</i>
-  <span class="drop" tabindex="0">पॉलिसी ▴<span class="menu"><a href="guidelines.html">कम्युनिटी नियम</a><a href="privacy.html">प्राइवेसी पॉलिसी</a><a href="terms.html">यूज़र एग्रीमेंट</a><a href="delete-account.html">अकाउंट डिलीट</a></span></span><i>|</i>
-  <a href="about.html">Taktak के बारे में</a><i>|</i><a href="mailto:support@taktakchat.com">संपर्क करें</a><i>|</i><span>🌐 हिंदी</span>
+  <a href="terms.html" data-i="fo.terms">Terms &amp; Conditions</a><i>|</i><a href="privacy.html" data-i="fo.privacy">Privacy</a><i>|</i>
+  <span class="drop" tabindex="0"><span data-i="fo.policies">Policies ▴</span><span class="menu"><a href="guidelines.html" data-i="fo.guide">Community Guidelines</a><a href="privacy.html" data-i="fo.pp">Privacy Policy</a><a href="terms.html" data-i="fo.ua">User Agreement</a><a href="delete-account.html" data-i="fo.del">Delete Account</a></span></span><i>|</i>
+  <a href="about.html" data-i="fo.about">About Taktak</a><i>|</i><a href="mailto:support@taktakchat.com" data-i="fo.contact">Contact Us</a><i>|</i><span class="flang">🌐 <button data-l="en">English</button> · <button data-l="hi">हिंदी</button> · <button data-l="ja">日本語</button></span>
  </div>
- <p class="f-copy">© 2026 Taktak. सर्वाधिकार सुरक्षित। • सिर्फ़ 18+ यूज़र्स के लिए • support@taktakchat.com</p>
+ <p class="f-copy" data-ih="fo.copy">© 2026 Taktak. All rights reserved. <span class="ja">全著作権所有</span> • 18+ users only • support@taktakchat.com</p>
 </div></footer>
 <script>
 document.querySelectorAll(".fx-card").forEach(c=>{c.addEventListener("pointermove",e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform="perspective(800px) rotateY("+x*10+"deg) rotateX("+(-y*10)+"deg) translateY(-4px)";c.style.setProperty("--mx",(x+.5)*100+"%");c.style.setProperty("--my",(y+.5)*100+"%")});c.addEventListener("pointerleave",()=>{c.style.transform=""})});
