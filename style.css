@@ -266,3 +266,11 @@ body{position:relative}
 .rb4{left:-14vw;top:2650px;transform:scaleX(-1) rotate(-6deg);opacity:.7}
 .rb5{right:-12vw;top:3400px;transform:rotate(-10deg);opacity:.65}
 @media(max-width:900px){.rb{width:130vw;opacity:.45}}
+/* ribbons: soft faded ends, slow drift */
+.rb{overflow:visible;transform:translate(0,0) rotate(var(--r,0deg)) scaleX(var(--sx,1));animation:drift 18s ease-in-out infinite alternate}
+.rb1{--r:-6deg}
+.rb2{--r:8deg;--sx:-1;animation-delay:-4s}
+.rb3{--r:12deg;animation-delay:-8s}
+.rb4{--r:-6deg;--sx:-1;animation-delay:-12s}
+.rb5{--r:-10deg;animation-delay:-2s}
+@keyframes drift{0%{transform:translate(0,0) rotate(var(--r)) scaleX(var(--sx,1))}100%{transform:translate(-2vw,24px) rotate(calc(var(--r) + 3deg)) scaleX(var(--sx,1))}}
