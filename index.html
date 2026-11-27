@@ -51,9 +51,9 @@
   <div class="panel">
    <div class="glow"></div>
    <div class="stack init">
-    <img class="card pos-l" src="img/s4.webp" alt="Taktak प्रोफ़ाइल" style="--d:.15s">
-    <img class="card pos-c" src="img/s2.webp" alt="Taktak पार्टी रूम" style="--d:0s">
-    <img class="card pos-r" src="img/s1.webp" alt="Taktak चैट" style="--d:.3s">
+    <img draggable="false" class="card pos-l" src="img/s4.webp" alt="Taktak प्रोफ़ाइल" style="--d:.15s">
+    <img draggable="false" class="card pos-c" src="img/s2.webp" alt="Taktak पार्टी रूम" style="--d:0s">
+    <img draggable="false" class="card pos-r" src="img/s1.webp" alt="Taktak चैट" style="--d:.3s">
    </div>
   </div>
  </div>
@@ -150,7 +150,7 @@ document.querySelectorAll(".sv[data-svga]").forEach(el=>io.observe(el))});
 </script>
 <script>
 /* tap / click ripple + pop feedback */
-document.querySelectorAll(".fx-card,.reel figure,.btn,.store,.panel img").forEach(el=>{
+document.querySelectorAll(".fx-card,.reel figure,.btn,.store").forEach(el=>{
  el.addEventListener("pointerdown",e=>{const r=el.getBoundingClientRect(),d=Math.max(r.width,r.height)*1.2;
   if(el.tagName!=="IMG"){const w=document.createElement("span");w.className="ripple";w.style.cssText="width:"+d+"px;height:"+d+"px;left:"+(e.clientX-r.left-d/2)+"px;top:"+(e.clientY-r.top-d/2)+"px";el.appendChild(w);setTimeout(()=>w.remove(),650)}
   el.classList.remove("tapped");void el.offsetWidth;el.classList.add("tapped")});
