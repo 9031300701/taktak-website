@@ -31,20 +31,22 @@
 </div>
 <nav><div class="wrap"><div class="bar">
  <a class="logo" href="index.html"><img class="mark" src="img/owl.png" alt="Taktakchat">Taktak<b>chat</b></a>
- <div class="links"><a class="on" href="#">होम</a><a href="#screens">झलक</a><a href="#features">फीचर</a><a href="#host">होस्ट बनें</a><a href="about.html">हमारे बारे में</a><a class="btn" href="#download">⬇ App</a></div>
+ <div class="links"><a class="on" href="#">होम</a><a href="#screens">झलक</a><a href="#features">फीचर</a><a href="#host">होस्ट बनें</a><a href="about.html">हमारे बारे में</a><span class="lang">🌐 हिंदी</span><a class="btn" href="#download">⬇ App</a></div>
 </div></div></nav>
 
 <header class="hero">
+ <div class="treeline"></div>
  <span class="side-text">TAKTAK • VOICE PARTY • MAKE FRIENDS • 2026</span>
  <div class="wrap">
   <div>
-   <img class="hero-logo" src="img/logo-full.png" alt="Taktakchat लोगो"><br><span class="sticker">🎙️ वॉइस पार्टी ऐप</span>
+   <span class="logo-wrap"><canvas class="sv rays" data-svga="anim/avatar_gifts.svga"></canvas><img class="hero-logo" src="img/logo-full.png" alt="Taktakchat लोगो"></span><br><span class="sticker"><canvas class="sv eq" data-svga="anim/bgm_playing_h.svga"></canvas>वॉइस पार्टी ऐप</span>
    <h1>नए <span class="hl">दोस्त</span>,<br>असली <span class="pk">बातें।</span></h1>
    <p>पार्टी रूम में बैठिए, बात कीजिए, गेम खेलिए और अपनी पसंद के लोगों से जुड़िए – सब कुछ आवाज़ से।</p>
    <div class="stores">
     <a class="store" href="#"><svg viewBox="0 0 24 24"><path d="M3.6 1.8 13.4 12 3.6 22.2c-.4-.2-.6-.7-.6-1.2V3c0-.5.2-1 .6-1.2zm11 11.4 2.6 2.6-11 6.3 8.4-8.9zm3.9-3.9 3 1.7c.9.5.9 1.6 0 2.1l-3 1.7-2.9-2.8 2.9-2.7zM6.2 1.9l11 6.3-2.6 2.6-8.4-8.9z"/></svg><span><small>GET IT ON</small><b>Google Play</b></span></a>
     <a class="store alt" href="#"><svg viewBox="0 0 24 24"><path d="M12 3v11.2l4-4 1.4 1.4L12 17l-5.4-5.4L8 10.2l4 4V3h0zM4 19h16v2H4z"/></svg><span><small>सीधे डाउनलोड</small><b>APK Download</b></span></a>
    </div>
+   <div class="hero-chips"><span>🆓 बिल्कुल फ्री</span><span>🔒 सुरक्षित और 18+</span><span>🎙️ 24×7 पार्टी रूम</span></div>
   </div>
   <div class="panel">
    <div class="glow"></div>
@@ -100,15 +102,15 @@
 
 <section id="host"><div class="wrap"><div class="host">
  <div>
-  <h2>होस्ट बनिए,<br><em>कमाई</em> कीजिए 💎</h2>
+  <h2>होस्ट बनिए,<br><em class="earn"><canvas class="sv coin" data-svga="anim/coin.svga"></canvas>कमाई</em> कीजिए <canvas class="sv giftorb" data-svga="anim/votaky_gift_kroom.svga"></canvas></h2>
   <p>बात कीजिए, गिफ्ट पाइए, डायमंड जमा कीजिए और पैसे निकालिए। एजेंसी से जुड़कर और ज़्यादा कमाइए।</p>
   <a class="btn" href="#download">अभी शुरू करें →</a>
  </div>
  <div class="steps"><div><b>1</b>ऐप डाउनलोड करें</div><div><b>2</b>रूम में बात करें</div><div><b>3</b>गिफ्ट से कमाएँ</div></div>
 </div></div></section>
 
-<section id="download" class="dl"><div class="wrap">
- <span class="sticker">FREE • ANDROID</span>
+<section id="download" class="dl"><div class="treeline"></div><div class="wrap">
+ <canvas class="sv heart" data-svga="anim/votaky_voice_sweetheart.svga"></canvas><br><span class="sticker">FREE • ANDROID</span>
  <h2>पार्टी में आ जाइए!</h2><p>आज ही Taktak डाउनलोड कीजिए, बिल्कुल फ्री।</p>
  <div class="stores">
   <a class="store" href="#"><svg viewBox="0 0 24 24"><path d="M3.6 1.8 13.4 12 3.6 22.2c-.4-.2-.6-.7-.6-1.2V3c0-.5.2-1 .6-1.2zm11 11.4 2.6 2.6-11 6.3 8.4-8.9zm3.9-3.9 3 1.7c.9.5.9 1.6 0 2.1l-3 1.7-2.9-2.8 2.9-2.7zM6.2 1.9l11 6.3-2.6 2.6-8.4-8.9z"/></svg><span><small>GET IT ON</small><b>Google Play</b></span></a>
@@ -134,5 +136,14 @@
 </div></footer>
 <script>
 document.querySelectorAll(".fx-card").forEach(c=>{c.addEventListener("pointermove",e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform="perspective(800px) rotateY("+x*10+"deg) rotateX("+(-y*10)+"deg) translateY(-4px)";c.style.setProperty("--mx",(x+.5)*100+"%");c.style.setProperty("--my",(y+.5)*100+"%")});c.addEventListener("pointerleave",()=>{c.style.transform=""})});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/svgaplayerweb@2.3.1/build/svga.min.js" defer></script>
+<script>
+addEventListener("load",()=>{if(!window.SVGA||matchMedia("(prefers-reduced-motion:reduce)").matches)return;
+const parser=new SVGA.Parser();
+const io=new IntersectionObserver(es=>es.forEach(e=>{const el=e.target;
+ if(e.isIntersecting){if(!el._p){const d=Math.min(devicePixelRatio||1,2);el.width=el.clientWidth*d;el.height=el.clientHeight*d;el._p=new SVGA.Player(el);el._p.loops=0;el._p.clearsAfterStop=false;parser.load(el.dataset.svga,v=>{el._p.setVideoItem(v);el._p.startAnimation();el.classList.add("on")})}else el._p.startAnimation()}
+ else if(el._p)el._p.pauseAnimation()}),{rootMargin:"100px"});
+document.querySelectorAll(".sv[data-svga]").forEach(el=>io.observe(el))});
 </script>
 </body></html>
